@@ -1,0 +1,3 @@
+obj\Debug\net6.0/Eventcatalog.cs \
+obj\Debug\net6.0/EventcatalogGrpc.cs: C:/Users/abdul.raheem/.nuget/packages/grpc.tools/2.49.0/build/native/include/google/protobuf/timestamp.proto\
+ ../TicketManagement.Services.EventCatalog/Protos/eventcatalog.proto
