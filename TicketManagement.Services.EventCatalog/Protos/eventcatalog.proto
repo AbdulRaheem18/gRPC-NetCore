@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+option csharp_namespace = "EventCatalog.gRPC";
+import "google/protobuf/timestamp.proto";
+
+service EventCatalogService {
+	rpc GetAllCategories(GetCategoriesRequest) returns (CategoriesResponse);
+}
+
+message GetCategoriesRequest{
+}
+
+message EventByCategoryIdRequest{
+	string CategoryId = 1;
+}
+
+message EventByEventIdRequest{
+	string EventId = 1;
+}
+
+message EventByCategoryIdResponse{
+	 string EventId = 1;
+     string Name = 2;
+     int32 Price = 3;
+     string Artist = 4;
+     google.protobuf.Timestamp Date = 5;
+     string Description = 6;
+     string ImageUrl = 7;
+     string CategoryId = 8;
+     string CategoryName = 9;
+}
+
+message EventByEventIdResponse{
+	 string EventId = 1;
+     string Name = 2;
+     int32 Price = 3;
+     string Artist = 4;
+     google.protobuf.Timestamp Date = 5;
+     string Description = 6;
+     string ImageUrl = 7;
+     string CategoryId = 8;
+     string CategoryName = 9;
+}
+
+
+
+message CategoriesResponse {
+	repeated CategoryItem Categories = 1;
+}
+
+message CategoryItem {
+	string CategoryId = 1;
+	string Name = 2;
+}
+
